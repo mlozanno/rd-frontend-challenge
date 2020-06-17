@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: 0;
+}
+
+html,
+body,
+#app {
+	height: 100%;
+}
+
+html {
+	font-size: 10px;
+}
+
+body,
+input,
+button {
+	font: 1.4rem "Roboto", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background: linear-gradient(-45deg, #aaa 25%, #eee 100%);
+	background-attachment: fixed;
+}
+
+/**
+* YOUR CODE HERE
+*/
+
+:root {
+	--dark-grey: #777777;
+	--light-grey: #ddd;
+	--grey: #d1d1d1;
+	--green: #218429;
+	--dark-green: #16581c;
+	--box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: scroll;
+}
+
+.login {
+	width: 40rem;
+	border-radius: 1.6rem 0;
+	background-color: var(--light-grey);
+	padding: 1.6rem;
+	box-shadow: var(--box-shadow);
+}
+
+.login form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login input,
+.login button {
+	width: 100%;
+	border: none;
+	height: 40px;
+	padding: 0.8rem;
+	border-radius: 0.4rem;
+}
+
+.login input,
+.login button:disabled {
+	background-color: var(--grey);
+}
+
+.login input {
+	margin-bottom: 0.8rem;
+}
+
+.login button:disabled {
+	cursor: default;
+}
+
+.login button {
+	background-color: var(--green);
+	cursor: pointer;
+	color: white;
+	transition: background-color 0.2s;
+}
+
+.login button:hover:not(:disabled) {
+	background-color: var(--dark-green);
+}
+
+.logo {
+	width: 5rem;
+	margin-bottom: 2.4rem;
+}
+
+.container {
+	width: 100%;
+	max-width: 60rem;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container li {
+	flex-basis: content;
+	flex-grow: 1;
+}
+
+.container a {
+	background-color: white;
+	font-weight: bold;
+	color: var(--dark-grey);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	padding: 0.8rem;
+	border-radius: 0.4rem;
+	box-shadow: var(--box-shadow);
+	margin: 0.4rem;
+}
+
+.container a img {
+	display: block;
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 100%;
+	margin-right: 0.8rem;
+	filter: grayscale();
+	transition: all 0.2s;
+}
+
+.container a:hover img {
+	filter: none;
+	transform: scale(2);
+}
